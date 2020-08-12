@@ -1,4 +1,4 @@
-const firebaseConfig = require('./firebase.config.js');
+// const firebaseConfig = require('./firebase.config.js');
 
 export default {
   /*
@@ -68,7 +68,15 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     ['@nuxtjs/firebase', {
-      config: firebaseConfig,
+      config: {
+        apiKey: "AIzaSyBdvT4Yuux0segZe7McC3cVzl1dY-hfYA8",
+        authDomain: "mashiachy-personal.firebaseapp.com",
+        databaseURL: "https://mashiachy-personal.firebaseio.com",
+        projectId: "mashiachy-personal",
+        storageBucket: "mashiachy-personal.appspot.com",
+        messagingSenderId: "609923115963",
+        appId: "1:609923115963:web:2f524c0634d94b8422f29e",
+      },
       services: {
         storage: true,
         realtimeDb: true,

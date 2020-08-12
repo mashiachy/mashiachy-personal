@@ -74,7 +74,9 @@
       <div class="resume-block">
         <h2>{{ $t('resume.langs.header') }}</h2>
         <article class="low-width two-column" v-html="$t('resume.langs.text')"></article>
-        <default-button class="resume-block__button">PDF</default-button>
+        <a :href="resumeUrl" target="_blank">
+          <default-button class="resume-block__button">PDF</default-button>
+        </a>
       </div>
     </main>
   </section>
@@ -99,6 +101,7 @@
       return {
         arrowHover: false,
         avatarImg,
+        resumeUrl: '',
         skillArticles: [
           {
             header: 'basic',
@@ -150,6 +153,15 @@
           },
         ],
       };
+    },
+    mounted () {
+      try {
+        this.$fireStorage.ref('resume/resume.pdf').getDownloadURL().then(url => {
+          this.resumeUrl = url;
+        });
+      } catch (e) {
+        console.log(e);
+      }
     },
   };
 </script>
