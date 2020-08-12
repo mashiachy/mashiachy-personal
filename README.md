@@ -1,4 +1,4 @@
-# mashiachy-second-try
+# mashiachy-personal
 
 ## Build Setup
 
