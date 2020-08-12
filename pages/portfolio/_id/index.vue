@@ -58,6 +58,11 @@
   import svgIcon from '~/assets/img/icons/click.svg';
 
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Портфолио-кейс' : 'Portfolio-work'}`,
+      };
+    },
     layout: 'portfolio',
     name: 'portfolioWorkPage',
     asyncData ({ params, $fireDb}) {

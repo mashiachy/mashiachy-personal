@@ -28,7 +28,7 @@ export default {
     ]
   },
 
-  transition: 'myPage',
+  pageTransition: 'myPage',
 
   /*
   ** Global CSS

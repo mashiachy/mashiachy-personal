@@ -85,6 +85,11 @@
   import skill from '~/components/skill';
 
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Резюме' : 'Resume'}`,
+      };
+    },
     layout: 'portfolio',
     name: 'resumePage',
     components: {

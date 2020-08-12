@@ -13,6 +13,11 @@
   import whyCard from '~/components/whyCard';
 
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Почему' : 'Why'}`,
+      };
+    },
     layout: 'default',
     name: 'whyPage',
     components: {

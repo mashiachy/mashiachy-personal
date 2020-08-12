@@ -23,6 +23,11 @@
   import extendedCard from '~/components/extendedCard';
 
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Что' : 'What'}`,
+      };
+    },
     layout: 'default',
     name: 'whatPage',
     components: {

@@ -266,6 +266,11 @@
 
 <script>
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Кто' : 'Who'}`,
+      };
+    },
     layout: 'default',
     name: 'whoPage',
     data () {

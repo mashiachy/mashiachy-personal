@@ -86,6 +86,11 @@
 
 <script>
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Как' : 'How'}`,
+      };
+    },
     layout: 'default',
     name: 'howPage',
     data () {

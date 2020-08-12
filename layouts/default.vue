@@ -23,6 +23,13 @@
   import threeLoading from '~/components/threeLoading';
 
   export default {
+    head () {
+      return {
+        htmlAttrs: {
+          lang: this.$i18n.locale,
+        },
+      };
+    },
     name: 'defaultLayout',
     components: {
       scrollProgress,

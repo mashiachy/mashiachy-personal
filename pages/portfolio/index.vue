@@ -21,6 +21,11 @@
   import portfolioCard from '~/components/portfolioCard';
 
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Портфолио' : 'Portfolio'}`,
+      };
+    },
     layout: 'portfolio',
     name: 'portfolioPage',
     components: {

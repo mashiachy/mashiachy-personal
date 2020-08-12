@@ -9,6 +9,13 @@
   import headerNav from '~/components/headerNav/';
 
   export default {
+    head () {
+      return {
+        htmlAttrs: {
+          lang: this.$i18n.locale,
+        },
+      };
+    },
     name: 'portfolioLayout',
     components: {
       headerNav,

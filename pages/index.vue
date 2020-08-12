@@ -28,6 +28,11 @@
 
 <script>
   export default {
+    head () {
+      return {
+        title: `Mashiachy | ${this.$i18n.locale === 'ru' ? 'Главная' : 'Home'}`,
+      };
+    },
     layout: 'default',
     name: 'indexPage',
     data () {
